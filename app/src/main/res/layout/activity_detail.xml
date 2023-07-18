@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DetailActivity"
+    android:backgroundTint="?attr/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dashboard_back" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fitsSystemWindows="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:backgroundTint="?attr/colorPrimary"
+            android:fontFamily="@font/core_rhino_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/core_rhino_heavy"
+                android:text="@string/title"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="55dp"
+                android:paddingBottom="55dp"
+                android:background="@color/background_color_50"
+                android:textColor="?attr/colorOnPrimary">
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/nama"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/data_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/nama_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@+id/data_tempat"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/nik"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+                <TextView
+                    android:id="@+id/data_nik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/nik_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@+id/data_tempat"
+                    app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+                <TextView
+                    android:id="@+id/tempat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/tempat"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@+id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/nik" />
+
+                <TextView
+                    android:id="@+id/data_tempat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="28dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/tempat_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/nik" />
+
+                <TextView
+                    android:id="@+id/tanggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/tanggal"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintEnd_toStartOf="@+id/data_tempat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tempat" />
+
+                <TextView
+                    android:id="@+id/data_tanggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/tanggal_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@+id/data_tempat"
+                    app:layout_constraintTop_toBottomOf="@+id/tempat" />
+
+                <TextView
+                    android:id="@+id/jk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/jk"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/tanggal" />
+
+                <TextView
+                    android:id="@+id/data_jk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/jk_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/data_tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/tanggal" />
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/alamat"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/jk" />
+
+                <TextView
+                    android:id="@+id/data_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/alamat_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/data_tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/jk" />
+
+                <TextView
+                    android:id="@+id/rt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/rt"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/alamat" />
+
+                <TextView
+                    android:id="@+id/data_rt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/rt_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/data_tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/alamat" />
+
+                <TextView
+                    android:id="@+id/kel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/kel"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/rt" />
+
+                <TextView
+                    android:id="@+id/data_kel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/kel_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/data_tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/rt" />
+
+                <TextView
+                    android:id="@+id/kec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/kec"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/kel" />
+
+                <TextView
+                    android:id="@+id/data_kec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/kec_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/data_tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/kel" />
+
+                <TextView
+                    android:id="@+id/agama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/agama"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/kec" />
+
+                <TextView
+                    android:id="@+id/data_agama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/agama_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/data_tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/kec" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/status"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/agama" />
+
+                <TextView
+                    android:id="@+id/data_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/status_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/data_tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/agama" />
+
+                <TextView
+                    android:id="@+id/pekerjaan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/pekerjaan"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/status" />
+
+                <TextView
+                    android:id="@+id/data_pekerjaan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/pekerjaan_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/data_tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/status" />
+
+                <TextView
+                    android:id="@+id/kw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/kw"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/pekerjaan" />
+
+                <TextView
+                    android:id="@+id/data_kw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/core_rhino_medium"
+                    android:text="@string/kw_dummy"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="@id/data_tanggal"
+                    app:layout_constraintTop_toBottomOf="@+id/pekerjaan" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_weight="8"
+                    android:padding="4dp"
+                    android:background="@color/background_color_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/kw">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card2"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toStartOf="@+id/card3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#f07167"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="fill_vertical"
+                                android:layout_margin="4dp"
+                                android:padding="8dp"
+                                android:src="@drawable/invoice"
+                                app:tint="#fff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/core_rhino_heavy"
+                                android:text="@string/request"
+                                android:textColor="@color/design_default_color_on_primary"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card3"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toEndOf="@+id/card4"
+                        app:layout_constraintStart_toEndOf="@+id/card2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#EFAE4E"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="fill_vertical"
+                                android:layout_margin="4dp"
+                                android:padding="6dp"
+                                android:src="@drawable/checklist"
+                                app:tint="#fff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/core_rhino_heavy"
+                                android:text="@string/person_history"
+                                android:textColor="@color/design_default_color_on_primary"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card4"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/card3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#219ebc"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="fill_vertical"
+                                android:layout_margin="4dp"
+                                android:padding="6dp"
+                                android:src="@drawable/checklist"
+                                app:tint="#fff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/core_rhino_heavy"
+                                android:text="@string/history"
+                                android:textColor="@color/design_default_color_on_primary"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_noData"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:textColor="?attr/colorOnPrimary"
+            android:text="@string/no_data"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_noData1"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:textColor="?attr/colorOnPrimary"
+            android:text="@string/no_data"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card5"
+            android:visibility="gone"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#006d77"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="2dp"
+                    android:padding="2dp"
+                    android:src="@drawable/person_add"
+                    app:tint="#fff"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/core_rhino_heavy"
+                    android:text="@string/tambah_data"
+                    android:textColor="@color/design_default_color_on_primary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_detail"
+                style="@style/SpinKitView.Large.FoldingCube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:SpinKit_Color="#f07167"
+                app:layout_anchor="@id/toolbar"
+                app:layout_anchorGravity="center|center_vertical" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

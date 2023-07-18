@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:padding="16dp"
+    android:backgroundTint="?attr/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_50">
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:text="@string/id_pengajuan"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toStartOf="@+id/tv_item_id"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_request"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:text="@string/requestDate"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toTopOf="@id/tv_item_selesai"
+            card_view:layout_constraintEnd_toEndOf="@+id/tv_id"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/tv_id" />
+
+        <TextView
+            android:id="@+id/tv_selesai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:text="@string/doneDate"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="@+id/tv_request"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_request"
+            card_view:layout_constraintTop_toBottomOf="@id/tv_request" />
+
+        <TextView
+            android:id="@+id/tv_keperluan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:text="@string/keperluan"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toTopOf="@id/tv_no_surat"
+            card_view:layout_constraintEnd_toEndOf="@+id/tv_request"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_request"
+            card_view:layout_constraintTop_toBottomOf="@id/tv_selesai" />
+
+        <TextView
+            android:id="@+id/tv_no_surat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:text="@string/no_surat"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="@+id/tv_request"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_request" />
+
+        <TextView
+            android:id="@+id/tv_item_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="@id/tv_id"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@id/tv_id"
+            card_view:layout_constraintTop_toTopOf="@id/tv_id" />
+
+        <TextView
+            android:id="@+id/tv_item_request"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="@id/tv_request"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@id/tv_request"
+            card_view:layout_constraintTop_toTopOf="@id/tv_request" />
+
+        <TextView
+            android:id="@+id/tv_item_selesai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/core_rhino_heavy"
+            card_view:layout_constraintBottom_toBottomOf="@id/tv_selesai"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@id/tv_selesai"
+            card_view:layout_constraintTop_toTopOf="@id/tv_selesai" />
+
+        <TextView
+            android:id="@+id/tv_item_keperluan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/core_rhino_heavy"
+            card_view:layout_constraintBottom_toBottomOf="@id/tv_keperluan"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@id/tv_keperluan"
+            card_view:layout_constraintTop_toTopOf="@id/tv_keperluan" />
+
+        <TextView
+            android:id="@+id/tv_item_no_surat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/core_rhino_heavy"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="@id/tv_no_surat"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@id/tv_no_surat"
+            card_view:layout_constraintTop_toTopOf="@id/tv_no_surat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

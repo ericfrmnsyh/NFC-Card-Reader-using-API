@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ta.skripsi.e_ktpreader.KTPActivity">
+
+    <item
+        android:id="@+id/action_repeat"
+        android:orderInCategory="104"
+        android:icon="@drawable/ic_round_repeat_24"
+        android:title="@string/repeat"
+        android:fontFamily="@font/karla_bold"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="104"
+        android:icon="@drawable/logout"
+        android:title="@string/logout"
+        android:fontFamily="@font/karla_bold"
+        app:showAsAction="ifRoom" />
+
+</menu>

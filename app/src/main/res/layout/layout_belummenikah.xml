@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/logoNGK"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/logo_kabupaten"
+        android:src="@drawable/logo_nganjuk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nama_kab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/timesbd"
+        android:text="@string/nama_kab"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/nama_kec"
+        app:layout_constraintStart_toStartOf="@+id/nama_kec"
+        app:layout_constraintTop_toTopOf="@+id/logoNGK"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/nama_kec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/timesbd"
+        android:text="@string/nama_kec"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/nama_desa"
+        app:layout_constraintStart_toStartOf="@+id/nama_desa"
+        app:layout_constraintTop_toBottomOf="@id/nama_kab"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/nama_desa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/timesbd"
+        android:text="@string/nama_desa"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/alamat_desa"
+        app:layout_constraintStart_toStartOf="@+id/alamat_desa"
+        app:layout_constraintTop_toBottomOf="@id/nama_kec"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/alamat_desa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/alamat_desa"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/strip1"
+        app:layout_constraintStart_toStartOf="@+id/strip1"
+        app:layout_constraintTop_toBottomOf="@id/nama_desa"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/strip1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/timesbd"
+        android:text="@string/strip"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/strip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="82dp"
+        android:fontFamily="@font/timesbd"
+        android:text="@string/strip"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/strip3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/timesbd"
+        android:text="@string/strip"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/suket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:fontFamily="@font/timesbd"
+        android:text="@string/surat_keterangan"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/strip3"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/no_surat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/no_surat2"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/suket"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/isi1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/times"
+        android:text="@string/isi_keterangan1"
+        android:textAlignment="viewEnd"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/isi2"
+        app:layout_constraintTop_toBottomOf="@id/no_surat" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="93dp"
+        android:fontFamily="@font/times"
+        android:text="@string/nama"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/data_nama"
+        app:layout_constraintStart_toStartOf="@id/isi1"
+        app:layout_constraintTop_toBottomOf="@id/isi1" />
+
+    <TextView
+        android:id="@+id/mid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mid11"
+        app:layout_constraintTop_toBottomOf="@id/isi1" />
+
+    <TextView
+        android:id="@+id/data_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/times"
+        android:text="@string/nama_dummy"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/data_ket"
+        app:layout_constraintTop_toBottomOf="@id/isi1"
+        tools:layout_editor_absoluteX="302dp" />
+
+    <TextView
+        android:id="@+id/tempat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/tempat"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tanggal"
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+    <TextView
+        android:id="@+id/mid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mid11"
+        app:layout_constraintTop_toTopOf="@+id/tempat" />
+
+    <TextView
+        android:id="@+id/data_tempat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/tempat_dummy"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/data_ket"
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+    <TextView
+        android:id="@+id/tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/tanggal"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/tempat" />
+
+    <TextView
+        android:id="@+id/mid3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mid11"
+        app:layout_constraintTop_toBottomOf="@+id/tempat" />
+
+    <TextView
+        android:id="@+id/data_tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/tanggal_dummy"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/data_ket"
+        app:layout_constraintTop_toBottomOf="@+id/tempat" />
+
+    <TextView
+        android:id="@+id/jk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/jk"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/agama" />
+
+    <TextView
+        android:id="@+id/mid4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mid11"
+        app:layout_constraintTop_toBottomOf="@+id/agama" />
+
+    <TextView
+        android:id="@+id/data_jk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/jk_dummy"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/data_ket"
+        app:layout_constraintTop_toBottomOf="@+id/agama" />
+
+    <TextView
+        android:id="@+id/kw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/kw"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/tanggal" />
+
+    <TextView
+        android:id="@+id/mid5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mid11"
+        app:layout_constraintTop_toBottomOf="@+id/tanggal" />
+
+    <TextView
+        android:id="@+id/data_kw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/kw_dummy"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/data_ket"
+        app:layout_constraintTop_toBottomOf="@+id/tanggal" />
+
+    <TextView
+        android:id="@+id/agama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/agama"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/kw" />
+
+    <TextView
+        android:id="@+id/mid6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mid11"
+        app:layout_constraintTop_toBottomOf="@+id/kw" />
+
+    <TextView
+        android:id="@+id/data_agama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/agama_dummy"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/data_ket"
+        app:layout_constraintTop_toBottomOf="@+id/kw" />
+
+    <TextView
+        android:id="@+id/pekerjaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/pekerjaan"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/jk" />
+
+    <TextView
+        android:id="@+id/mid8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mid11"
+        app:layout_constraintTop_toBottomOf="@+id/jk" />
+
+    <TextView
+        android:id="@+id/data_pekerjaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/pekerjaan_dummy"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/data_ket"
+        app:layout_constraintTop_toBottomOf="@+id/jk" />
+
+    <TextView
+        android:id="@+id/nik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/nik"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/pekerjaan" />
+
+    <TextView
+        android:id="@+id/mid9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mid11"
+        app:layout_constraintTop_toBottomOf="@+id/pekerjaan" />
+
+    <TextView
+        android:id="@+id/data_nik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/nik_dummy"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/data_ket"
+        app:layout_constraintTop_toBottomOf="@+id/pekerjaan" />
+
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/alamat"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/nik" />
+
+    <TextView
+        android:id="@+id/mid10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/mid11"
+        app:layout_constraintTop_toBottomOf="@+id/nik" />
+
+    <TextView
+        android:id="@+id/data_alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/alamat_dummy"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/data_ket"
+        app:layout_constraintTop_toBottomOf="@+id/nik" />
+
+    <TextView
+        android:id="@+id/keterangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/keterangan"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/alamat" />
+
+    <TextView
+        android:id="@+id/mid11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/mid"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/data_ket"
+        app:layout_constraintStart_toEndOf="@+id/kw"
+        app:layout_constraintTop_toBottomOf="@+id/alamat" />
+
+    <TextView
+        android:id="@+id/data_ket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/times"
+        android:text="@string/data_ket3"
+        android:textColor="?attr/colorOnPrimary"
+        android:justificationMode="inter_word"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/isi2"
+        app:layout_constraintStart_toEndOf="@+id/mid11"
+        app:layout_constraintTop_toBottomOf="@+id/alamat" />
+
+    <TextView
+        android:id="@+id/isi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/times"
+        android:text="@string/isi_keterangan2"
+        android:textAlignment="viewStart"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/logoNGK"
+        app:layout_constraintTop_toBottomOf="@id/data_ket" />
+
+    <TextView
+        android:id="@+id/ket2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/times"
+        android:text="@string/ket_2"
+        android:textAlignment="textEnd"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/isi2" />
+
+    <TextView
+        android:id="@+id/ybs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/times"
+        android:text="@string/ybs"
+        android:textAlignment="textEnd"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ket2" />
+
+    <TextView
+        android:id="@+id/ttd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/times"
+        android:text="@string/ttd"
+        android:textAlignment="textEnd"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/ybs"
+        app:layout_constraintStart_toStartOf="@+id/ybs"
+        app:layout_constraintTop_toBottomOf="@id/kades" />
+
+    <TextView
+        android:id="@+id/kades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/times"
+        android:text="@string/kades"
+        android:textAlignment="textEnd"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/ket2"
+        app:layout_constraintStart_toStartOf="@+id/ket2"
+        app:layout_constraintTop_toBottomOf="@id/ket2" />
+
+    <TextView
+        android:id="@+id/ttd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/times"
+        android:text="@string/ttd"
+        android:textAlignment="textEnd"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/ket2"
+        app:layout_constraintStart_toStartOf="@+id/ket2"
+        app:layout_constraintTop_toBottomOf="@id/kades" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
