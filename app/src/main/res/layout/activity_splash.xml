@@ -25,7 +25,7 @@
             android:layout_below="@+id/icon"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="145dp"
-            android:fontFamily="@font/core_rhino_heavy"
+            android:fontFamily="@font/spbutch_lite_bold"
             android:text="@string/created_by"
             android:textSize="13sp" />
 

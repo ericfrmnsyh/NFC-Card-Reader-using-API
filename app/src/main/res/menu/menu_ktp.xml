@@ -9,7 +9,7 @@
         android:orderInCategory="104"
         android:icon="@drawable/ic_round_repeat_24"
         android:title="@string/repeat"
-        android:fontFamily="@font/karla_bold"
+        android:fontFamily="@font/spbutch_lite_bold"
         app:showAsAction="ifRoom" />
 
     <item
@@ -17,7 +17,7 @@
         android:orderInCategory="104"
         android:icon="@drawable/logout"
         android:title="@string/logout"
-        android:fontFamily="@font/karla_bold"
+        android:fontFamily="@font/spbutch_lite_bold"
         app:showAsAction="ifRoom" />
 
 </menu>

@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:backgroundTint="?attr/colorPrimary"
-        android:fontFamily="@font/core_rhino_medium"
+        android:fontFamily="@font/spbutch_lite_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

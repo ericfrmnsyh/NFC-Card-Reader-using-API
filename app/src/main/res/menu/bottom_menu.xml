@@ -11,4 +11,14 @@
         android:title="@string/history"
         android:icon="@drawable/ic_baseline_density_medium_24"
         app:cnb_iconColor="@color/gray_dark"/>
+    <item
+        android:id="@+id/menu_history"
+        android:title="@string/title"
+        android:icon="@drawable/ic_observe"
+        app:cnb_iconColor="@color/green_dark"/>
+    <item
+        android:id="@+id/menu_local_history"
+        android:title="@string/history"
+        android:icon="@drawable/ic_baseline_density_medium_24"
+        app:cnb_iconColor="@color/gray_dark"/>
 </menu>
