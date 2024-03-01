@@ -43,6 +43,8 @@ class SelectFragment : Fragment() {
 
         //sectionPagerAdapterSetup()
 
+
+        nik?.let { tag?.let { it1 -> select(it, it1) } }
         return root
     }
 
@@ -110,13 +112,13 @@ class SelectFragment : Fragment() {
         }
     }
 
-    companion object {
-        fun start(context: Context, nik: String, tag: String) {
-            Intent(context, SelectActivity::class.java).apply {
-                this.putExtra("KEY_NIK", nik)
-                this.putExtra("KEY_TAG", tag)
-                context.startActivity(this)
-            }
-        }
-    }
+//    companion object {
+//        fun start(context: Context, nik: String, tag: String) {
+//            Intent(context, SelectActivity::class.java).apply {
+//                this.putExtra("KEY_NIK", nik)
+//                this.putExtra("KEY_TAG", tag)
+//                context.startActivity(this)
+//            }
+//        }
+//    }
 }
