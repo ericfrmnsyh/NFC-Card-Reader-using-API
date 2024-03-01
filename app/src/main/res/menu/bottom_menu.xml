@@ -2,23 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menu_observe"
+        android:id="@+id/menu_home"
         android:title="@string/title"
-        android:icon="@drawable/ic_observe"
+        android:icon="@drawable/home"
         app:cnb_iconColor="@color/green_dark"/>
     <item
-        android:id="@+id/menu_favorite"
-        android:title="@string/history"
-        android:icon="@drawable/ic_baseline_density_medium_24"
+        android:id="@+id/menu_select"
+        android:title="@string/ajuan"
+        android:icon="@drawable/outgoing_mail"
         app:cnb_iconColor="@color/gray_dark"/>
     <item
-        android:id="@+id/menu_history"
-        android:title="@string/title"
-        android:icon="@drawable/ic_observe"
+        android:id="@+id/menu_local_history"
+        android:title="@string/person_history"
+        android:icon="@drawable/history"
         app:cnb_iconColor="@color/green_dark"/>
     <item
-        android:id="@+id/menu_local_history"
+        android:id="@+id/menu_history"
         android:title="@string/history"
-        android:icon="@drawable/ic_baseline_density_medium_24"
+        android:icon="@drawable/browse_activity"
         app:cnb_iconColor="@color/gray_dark"/>
 </menu>

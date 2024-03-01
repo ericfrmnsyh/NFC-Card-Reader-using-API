@@ -1,17 +1,14 @@
 package com.android.ektpreader.skripsi.ui.fragment
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.ektpreader.skripsi.databinding.FragmentSelectBinding
 import com.android.ektpreader.skripsi.ui.activity.DetailActivity
-import com.android.ektpreader.skripsi.ui.activity.SelectActivity
 import com.android.ektpreader.skripsi.ui.viewmodel.MainViewModel
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -43,6 +40,7 @@ class SelectFragment : Fragment() {
 
         //sectionPagerAdapterSetup()
 
+        connectViewModel()
 
         nik?.let { tag?.let { it1 -> select(it, it1) } }
         return root

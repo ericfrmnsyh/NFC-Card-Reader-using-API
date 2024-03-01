@@ -25,12 +25,10 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:layout_marginTop="35dp"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:backgroundTint="?attr/colorPrimary"
-            android:fontFamily="@font/gamilia_regular"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">

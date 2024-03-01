@@ -2,21 +2,17 @@ package com.android.ektpreader.skripsi.ui.fragment
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.android.ektpreader.skripsi.R
 import com.android.ektpreader.skripsi.data.LogModel
 import com.android.ektpreader.skripsi.data.response.NewLogResponse
-import com.android.ektpreader.skripsi.databinding.ActivityListBinding
-import com.android.ektpreader.skripsi.databinding.FragmentHomeBinding
 import com.android.ektpreader.skripsi.databinding.FragmentLogBinding
-import com.android.ektpreader.skripsi.helper.Constant
 import com.android.ektpreader.skripsi.ui.adapter.MainAdapter
 import com.android.ektpreader.skripsi.ui.viewmodel.MainViewModel
 import retrofit2.Call
@@ -40,7 +36,7 @@ class LogFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentLogBinding.inflate(inflater, container, false)
         val root: View = binding.root
 

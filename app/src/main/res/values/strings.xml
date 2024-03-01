@@ -92,4 +92,6 @@
     <string name="logout">Log Out</string>
     <string name="title_home">Home</string>
     <string name="title_profile">Profile</string>
+    <string name="ajuan">Ajuan</string>
+    <string name="space">" "</string>
 </resources>
