@@ -1,5 +1,7 @@
 package com.android.ektpreader.skripsi.ui.activity
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -76,10 +78,19 @@ class DashboardActivity : AppCompatActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         val bundle = Bundle()
         bundle.putString("tag", tag)
-        bundle.putString("nik", tag)
+        bundle.putString("nik", nik)
         fragment.arguments = bundle
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
         transaction.replace(R.id.nav_host_fragment_activity_main, fragment)
         transaction.commit()
+    }
+
+    companion object {
+        fun start(context: Context, tag: String) {
+            Intent(context, DashboardActivity::class.java).apply {
+                this.putExtra("KEY_TAG", tag)
+                context.startActivity(this)
+            }
+        }
     }
 }

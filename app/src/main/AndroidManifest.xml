@@ -45,6 +45,9 @@
             android:name=".ui.activity.DetailActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.activity.DashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.SelectActivity"
             android:exported="false" />
         <activity

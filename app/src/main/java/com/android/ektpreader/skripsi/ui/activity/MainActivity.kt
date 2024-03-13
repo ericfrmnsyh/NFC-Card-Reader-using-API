@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             tagIdByte.forEach { tagId.add(String.format("%02X", it)) }
             val tagIdJoined: String = tagId.joinToString("")
             Log.d(TAG, "onNewIntent: tagId=$tagId, tagIdJoined=$tagIdJoined")
-            DetailActivity.start(this, tagIdJoined)
+            DashboardActivity.start(this, tagIdJoined)
             //RootActivity.start(this, tagIdJoined)
         }
     }

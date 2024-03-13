@@ -139,8 +139,8 @@
             app:cardCornerRadius="100dp"
             app:cardElevation="0dp"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="-42dp"
-            tools:layout_editor_absoluteY="-40dp">
+            tools:layout_editor_absoluteX="-43dp"
+            tools:layout_editor_absoluteY="-41dp">
 
         </androidx.cardview.widget.CardView>
 
@@ -155,8 +155,8 @@
             app:cardCornerRadius="100dp"
             app:cardElevation="0dp"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="354dp"
-            tools:layout_editor_absoluteY="111dp">
+            tools:layout_editor_absoluteX="358dp"
+            tools:layout_editor_absoluteY="83dp">
 
         </androidx.cardview.widget.CardView>
 
@@ -171,8 +171,8 @@
             app:cardCornerRadius="100dp"
             app:cardElevation="0dp"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="193dp"
-            tools:layout_editor_absoluteY="685dp">
+            tools:layout_editor_absoluteX="143dp"
+            tools:layout_editor_absoluteY="763dp">
 
         </androidx.cardview.widget.CardView>
 
