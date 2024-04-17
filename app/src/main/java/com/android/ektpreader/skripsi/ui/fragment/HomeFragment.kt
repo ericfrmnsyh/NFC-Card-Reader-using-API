@@ -2,7 +2,6 @@ package com.android.ektpreader.skripsi.ui.fragment
 
 import android.annotation.SuppressLint
 import android.content.ContentValues
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
@@ -15,14 +14,15 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.ektpreader.skripsi.R
 import com.android.ektpreader.skripsi.data.response.DataItem
 import com.android.ektpreader.skripsi.databinding.FragmentHomeBinding
 import com.android.ektpreader.skripsi.helper.Constant
 import com.android.ektpreader.skripsi.ui.activity.DashboardActivity
-import com.android.ektpreader.skripsi.ui.activity.DetailActivity
 import com.android.ektpreader.skripsi.ui.activity.MainActivity
+import com.android.ektpreader.skripsi.ui.viewmodel.DataViewModel
 import com.android.ektpreader.skripsi.ui.viewmodel.MainViewModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -39,8 +39,11 @@ class HomeFragment : Fragment() {
     private lateinit var mainViewModel: MainViewModel
     private lateinit var mySharedPreferences: SharedPreferences
     private lateinit var myEditor: SharedPreferences.Editor
-    private var tag: String? = null
+    private lateinit var viewModel: DataViewModel
+    private lateinit var tag: String
+//    private var tag: String? = ""
     private lateinit var nik: String
+//    private var nik: String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         @Suppress("DEPRECATION")
@@ -58,17 +61,16 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        initSharedPreferences()
+//        val dataTag = arguments?.getString(Constant.KEY_TAG)
 
-        val intent = Intent(context, DashboardActivity::class.java)
-        tag = intent.getStringExtra(Constant.KEY_TAG)
+        initSharedPreferences()
         connectViewModel()
         mainViewModel.getDetail().observe(requireActivity()) {
             if (it != null) {
                 updateUserData(it)
                 showLoading(false)
 
-                nik = mySharedPreferences.getString(Constant.KEY_NIK, null).toString()
+                nik = mySharedPreferences.getString(arguments?.getString(Constant.KEY_NIK), null).toString()
 //                binding.card2.setOnClickListener{
 //                    tag?.let { it1 -> SelectActivity.start(this, nik, it1) }
 //                }
@@ -81,10 +83,16 @@ class HomeFragment : Fragment() {
             }
         }
 
-        tag?.let {
-            showLoading(true)
-            getDetail(it)
+        viewModel = ViewModelProvider(requireActivity())[DataViewModel::class.java]
+        viewModel.tag.observe(viewLifecycleOwner) { data ->
+            tag = data
+            tag.let {
+                showLoading(true)
+                getDetail(it)
+            }
+            Toast.makeText(requireContext(), "Data from HomeFragment : $tag", Toast.LENGTH_SHORT).show()
         }
+        
         return root
     }
 
@@ -156,7 +164,7 @@ class HomeFragment : Fragment() {
 
         binding.card5.visibility = View.VISIBLE
         binding.card5.setOnClickListener{
-            tag?.let { it1 -> mainViewModel.uploadReq(dateInString, it1) }
+            tag.let { it1 -> mainViewModel.uploadReq(dateInString, it1) }
             Toast.makeText(requireContext(), "$tag Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
             val intent = Intent(context, MainActivity::class.java)
             startActivity(intent)
@@ -190,15 +198,16 @@ class HomeFragment : Fragment() {
             dataPekerjaan.text = data.pekerjaan
             dataKw.text = data.kewarganegaraan
             insertSharedPreferences(dataNik.text.toString())
+            viewModel.nik.value = dataNik.text.toString()
             //data.nik?.let { insertSharedPreferences(it) }
         }
     }
 
     companion object {
-        fun start(context: Context, tag: String) {
-            Intent(context, DetailActivity::class.java).apply {
-                this.putExtra("KEY_TAG", tag)
-                context.startActivity(this)
+        @JvmStatic
+        fun newInstance(tag: String) = HomeFragment().apply {
+            arguments = Bundle().apply {
+                putString(Constant.KEY_TAG, tag)
             }
         }
     }

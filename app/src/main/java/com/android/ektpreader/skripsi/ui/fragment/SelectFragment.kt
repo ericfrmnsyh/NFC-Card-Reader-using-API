@@ -8,7 +8,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.ektpreader.skripsi.databinding.FragmentSelectBinding
+import com.android.ektpreader.skripsi.ui.activity.DashboardActivity
 import com.android.ektpreader.skripsi.ui.activity.DetailActivity
+import com.android.ektpreader.skripsi.ui.viewmodel.DataViewModel
 import com.android.ektpreader.skripsi.ui.viewmodel.MainViewModel
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -20,8 +22,9 @@ class SelectFragment : Fragment() {
     private var _binding: FragmentSelectBinding? = null
     private val binding get() = _binding!!
     private lateinit var mainViewModel: MainViewModel
-    private var nik: String? = null
-    private var tag: String? = null
+    private lateinit var viewModel: DataViewModel
+    private lateinit var nik: String
+    private lateinit var tag: String
 
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +45,20 @@ class SelectFragment : Fragment() {
 
         connectViewModel()
 
-        nik?.let { tag?.let { it1 -> select(it, it1) } }
+        viewModel = ViewModelProvider(requireActivity())[DataViewModel::class.java]
+        viewModel.nik.observe(viewLifecycleOwner) { data ->
+            nik = data
+            nik.let {
+                viewModel.tag.observe(viewLifecycleOwner) { data ->
+                    tag = data
+                    tag.let {
+                        it1 -> select(it, it1)
+                    }
+                    Toast.makeText(requireContext(), "Data from SelectFragment : $tag", Toast.LENGTH_SHORT).show()
+                }
+            }
+            Toast.makeText(requireContext(), "Data from SelectFragment : $nik", Toast.LENGTH_SHORT).show()
+        }
         return root
     }
 
@@ -86,27 +102,27 @@ class SelectFragment : Fragment() {
         binding.card1.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "1")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DetailActivity.start(requireContext(), tag)
+            DashboardActivity.start(requireContext(), tag)
         }
         binding.card2.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "2")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DetailActivity.start(requireContext(), tag)
+            DashboardActivity.start(requireContext(), tag)
         }
         binding.card3.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "3")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DetailActivity.start(requireContext(), tag)
+            DashboardActivity.start(requireContext(), tag)
         }
         binding.card4.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "4")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DetailActivity.start(requireContext(), tag)
+            DashboardActivity.start(requireContext(), tag)
         }
         binding.card5.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "5")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DetailActivity.start(requireContext(), tag)
+            DashboardActivity.start(requireContext(), tag)
         }
     }
 

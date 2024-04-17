@@ -7,19 +7,23 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.ViewModelProvider
 import com.android.ektpreader.skripsi.R
 import com.android.ektpreader.skripsi.databinding.ActivityDashboardBinding
+import com.android.ektpreader.skripsi.helper.Constant
 import com.android.ektpreader.skripsi.ui.fragment.AllLogFragment
 import com.android.ektpreader.skripsi.ui.fragment.HomeFragment
 import com.android.ektpreader.skripsi.ui.fragment.LogFragment
 import com.android.ektpreader.skripsi.ui.fragment.SelectFragment
+import com.android.ektpreader.skripsi.ui.viewmodel.DataViewModel
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
     private var tag: String? = null
-    private var nik: String? = null
+    private lateinit var nik: String
+    private lateinit var viewModel: DataViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +33,12 @@ class DashboardActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
+        tag = intent?.getStringExtra(Constant.KEY_TAG)
+        nik = intent?.getStringExtra(Constant.KEY_NIK).toString()
+
+        viewModel = ViewModelProvider(this)[DataViewModel::class.java]
+        viewModel.tag.value = tag
+
         binding.bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener {
             override fun onTabSelected(
                 lastIndex: Int,
@@ -37,10 +47,11 @@ class DashboardActivity : AppCompatActivity() {
                 newTab: AnimatedBottomBar.Tab
             ) {
                 when(newIndex){
-                    0->replace(HomeFragment())
-                    1->replace(SelectFragment())
-                    2->replace(LogFragment())
-                    3->replace(AllLogFragment())
+//                    0-> tag?.let { HomeFragment.newInstance(it) }?.let { replace(it) }
+                    0-> replace(HomeFragment())
+                    1-> replace(SelectFragment())
+                    2-> replace(LogFragment())
+                    3-> replace(AllLogFragment())
                 }
                 Log.d("bottom_bar", "Selected index: $newIndex, title: ${newTab.title}")
             }
@@ -75,20 +86,25 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun replace(fragment: Fragment){
+
+//        tag = intent?.getStringExtra(Constant.KEY_TAG)
+//        nik = intent?.getStringExtra(Constant.KEY_NIK).toString()
+//
         val transaction = supportFragmentManager.beginTransaction()
-        val bundle = Bundle()
-        bundle.putString("tag", tag)
-        bundle.putString("nik", nik)
-        fragment.arguments = bundle
+//        val bundle = Bundle()
+//        bundle.putString(Constant.KEY_TAG, tag)
+//        bundle.putString(Constant.KEY_NIK, nik)
+//        fragment.arguments = bundle
+
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-        transaction.replace(R.id.nav_host_fragment_activity_main, fragment)
-        transaction.commit()
+        transaction.addToBackStack(null)
+        transaction.replace(R.id.nav_host_fragment_activity_main, fragment).commit()
     }
 
     companion object {
         fun start(context: Context, tag: String) {
             Intent(context, DashboardActivity::class.java).apply {
-                this.putExtra("KEY_TAG", tag)
+                this.putExtra(Constant.KEY_TAG, tag)
                 context.startActivity(this)
             }
         }

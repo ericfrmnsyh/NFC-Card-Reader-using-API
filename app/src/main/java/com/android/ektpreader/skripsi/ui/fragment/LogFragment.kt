@@ -13,7 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.ektpreader.skripsi.data.LogModel
 import com.android.ektpreader.skripsi.data.response.NewLogResponse
 import com.android.ektpreader.skripsi.databinding.FragmentLogBinding
+import com.android.ektpreader.skripsi.helper.Constant
 import com.android.ektpreader.skripsi.ui.adapter.MainAdapter
+import com.android.ektpreader.skripsi.ui.viewmodel.DataViewModel
 import com.android.ektpreader.skripsi.ui.viewmodel.MainViewModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -24,7 +26,8 @@ class LogFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var mainAdapter: MainAdapter
     private lateinit var mainViewModel: MainViewModel
-    private var nik: String? = null
+    private lateinit var viewModel: DataViewModel
+    private lateinit var nik: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         @Suppress("DEPRECATION")
@@ -48,10 +51,16 @@ class LogFragment : Fragment() {
             }
         }
 
-        nik?.let {
-            showLoading(true)
-            listLog(it)
+        viewModel = ViewModelProvider(requireActivity())[DataViewModel::class.java]
+        viewModel.nik.observe(viewLifecycleOwner) { data ->
+            nik = data
+            nik.let {
+                showLoading(true)
+                listLog(it)
+            }
+            Toast.makeText(requireContext(), "Data from LogFragment : $nik", Toast.LENGTH_SHORT).show()
         }
+
         setAdapter()
         return root
     }

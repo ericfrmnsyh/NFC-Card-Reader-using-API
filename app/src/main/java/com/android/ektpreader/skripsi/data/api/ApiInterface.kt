@@ -8,7 +8,12 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface ApiInterface {
-    @GET("ktp/show/{tag}")
+//    @GET("ktp/show/{tag}")
+//    fun getDataItem(
+//        @Path("tag") tag: String
+//    ): Call<DataItem>
+
+    @GET("ktp/{tag}")
     fun getDataItem(
         @Path("tag") tag: String
     ): Call<DataItem>
@@ -21,7 +26,12 @@ interface ApiInterface {
     @GET("log")
     fun getAllLog(): Call<NewLogResponse>
 
-    @GET("log/show/{nik}")
+//    @GET("log/show/{nik}")
+//    fun getLogItem(
+//        @Path("nik") nik: String
+//    ): Call<NewLogResponse>
+
+    @GET("log/{nik}")
     fun getLogItem(
         @Path("nik") nik: String
     ): Call<NewLogResponse>
