@@ -90,7 +90,6 @@ class HomeFragment : Fragment() {
                 showLoading(true)
                 getDetail(it)
             }
-            Toast.makeText(requireContext(), "Data from HomeFragment : $tag", Toast.LENGTH_SHORT).show()
         }
         
         return root

@@ -54,10 +54,8 @@ class SelectFragment : Fragment() {
                     tag.let {
                         it1 -> select(it, it1)
                     }
-                    Toast.makeText(requireContext(), "Data from SelectFragment : $tag", Toast.LENGTH_SHORT).show()
                 }
             }
-            Toast.makeText(requireContext(), "Data from SelectFragment : $nik", Toast.LENGTH_SHORT).show()
         }
         return root
     }

@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         )
         nfcAdapter = NfcAdapter.getDefaultAdapter(this)
 
-//        DashboardActivity.start(this, "045D9042475A80")
+        DashboardActivity.start(this, "045D9042475A80")
     }
 
     @Suppress("DEPRECATION")

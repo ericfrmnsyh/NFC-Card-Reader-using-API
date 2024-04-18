@@ -58,7 +58,6 @@ class LogFragment : Fragment() {
                 showLoading(true)
                 listLog(it)
             }
-            Toast.makeText(requireContext(), "Data from LogFragment : $nik", Toast.LENGTH_SHORT).show()
         }
 
         setAdapter()

@@ -37,7 +37,7 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/spbutch_lite_bold"
+                android:fontFamily="@font/product_sans_bold"
                 android:text="@string/select"
                 android:textColor="@color/white"
                 android:textSize="35sp" />
@@ -65,8 +65,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card1"
-                    android:layout_width="310dp"
-                    android:layout_height="50dp"
+                    android:layout_width="165dp"
+                    android:layout_height="205dp"
                     android:layout_marginTop="60dp"
                     android:layout_marginBottom="20dp"
                     android:clickable="true"
@@ -74,22 +74,21 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="0dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/card2"
+                    app:layout_constraintStart_toStartOf="@id/card5"
+                    app:layout_constraintBottom_toTopOf="@+id/card4"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#1d3557"
-                        android:gravity="start|center_vertical"
-                        android:orientation="horizontal">
+                        android:background="#004e89"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="fill_vertical"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_gravity="center"
                             android:layout_marginEnd="6.5dp"
                             android:layout_marginStart="4dp"
                             android:padding="10dp"
@@ -100,84 +99,38 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/product_sans_bold_italic"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/spbutch_lite_bold"
                             android:text="@string/surat1"
                             android:textColor="@color/design_default_color_on_primary"
-                            android:textSize="20sp" />
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card2"
-                    android:layout_width="310dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="20dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/card1"
-                    app:layout_constraintBottom_toTopOf="@id/card3">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#2c6e49"
-                        android:gravity="start|center_vertical"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="fill_vertical"
-                            android:layout_marginEnd="6.5dp"
-                            android:layout_marginStart="4dp"
-                            android:padding="10dp"
-                            android:src="@drawable/history_edu"
-                            android:contentDescription="@string/image_preview"
-                            app:tint="#fff" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/product_sans_bold_italic"
-                            android:text="@string/surat2"
-                            android:textColor="@color/design_default_color_on_primary"
-                            android:textSize="20sp" />
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card3"
-                    android:layout_width="310dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="20dp"
+                    android:layout_width="190dp"
+                    android:layout_height="145dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="0dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/card4"
-                    app:layout_constraintTop_toBottomOf="@+id/card2">
+                    app:layout_constraintEnd_toEndOf="@id/card2"
+                    app:layout_constraintTop_toTopOf="@+id/card1">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#ffb703"
-                        android:gravity="start|center_vertical"
-                        android:orientation="horizontal">
+                        android:background="#004e89"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="fill_vertical"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_gravity="center"
                             android:layout_marginEnd="6.5dp"
                             android:layout_marginStart="4dp"
                             android:padding="10dp"
@@ -188,41 +141,38 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/product_sans_bold_italic"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/spbutch_lite_bold"
                             android:text="@string/surat3"
                             android:textColor="@color/design_default_color_on_primary"
-                            android:textSize="20sp" />
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card4"
-                    android:layout_width="310dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="20dp"
+                    android:layout_width="190dp"
+                    android:layout_height="145dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="0dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/card3"
-                    app:layout_constraintBottom_toTopOf="@id/card5"
-                    >
+                    app:layout_constraintStart_toStartOf="@id/card1"
+                    app:layout_constraintBottom_toBottomOf="@+id/card2">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#eb5e28"
-                        android:gravity="start|center_vertical"
-                        android:orientation="horizontal">
+                        android:background="#004e89"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="fill_vertical"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_gravity="center"
                             android:layout_marginEnd="6.5dp"
                             android:layout_marginStart="4dp"
                             android:padding="10dp"
@@ -233,19 +183,62 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/product_sans_bold_italic"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/spbutch_lite_bold"
                             android:text="@string/surat4"
                             android:textColor="@color/design_default_color_on_primary"
-                            android:textSize="20sp" />
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card2"
+                    android:layout_width="165dp"
+                    android:layout_height="205dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/card5"
+                    app:layout_constraintEnd_toEndOf="@+id/card5"
+                    app:layout_constraintTop_toBottomOf="@+id/card3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#004e89"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="6.5dp"
+                            android:contentDescription="@string/image_preview"
+                            android:padding="10dp"
+                            android:src="@drawable/history_edu"
+                            app:tint="#fff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/spbutch_lite_bold"
+                            android:text="@string/surat2"
+                            android:textColor="@color/design_default_color_on_primary"
+                            android:textSize="17sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card5"
-                    android:layout_width="310dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_width="370dp"
+                    android:layout_height="75dp"
                     android:layout_marginBottom="60dp"
                     android:clickable="true"
                     android:focusable="true"
@@ -254,19 +247,18 @@
                     app:cardElevation="0dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/card4"
                     app:layout_constraintBottom_toBottomOf="parent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#bf0603"
+                        android:background="#004e89"
                         android:gravity="start|center_vertical"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
                             android:layout_gravity="fill_vertical"
                             android:layout_marginEnd="6.5dp"
                             android:layout_marginStart="4dp"
@@ -278,10 +270,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/product_sans_bold_italic"
+                            android:fontFamily="@font/spbutch_lite_bold"
                             android:text="@string/surat5"
                             android:textColor="@color/design_default_color_on_primary"
-                            android:textSize="20sp" />
+                            android:textSize="22sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>

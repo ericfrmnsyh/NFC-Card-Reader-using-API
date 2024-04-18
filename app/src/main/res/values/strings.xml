@@ -5,8 +5,8 @@
     <string name="kis">KIS / BPJS</string>
     <string name="sim">SIM</string>
     <string name="welcome">Selamat Datang</string>
-    <string name="greeting">Dengan teknologi NFC \nsistem administrasi menjadi \nlebih mudah dan efisien.</string>
-    <string name="perintah">Tempelkan\ne-KTP Anda</string>
+    <string name="greeting">Dengan teknologi NFC, sistem administrasi \nmenjadi lebih mudah dan efisien.</string>
+    <string name="perintah">Tempelkan e-KTP Anda</string>
     <string name="repeat">repeat</string>
     <string name="image_preview">Image Preview</string>
     <string name="nama">Nama</string>

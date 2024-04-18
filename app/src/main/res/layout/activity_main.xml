@@ -13,99 +13,59 @@
         android:backgroundTint="?attr/colorPrimary"
         tools:context=".ui.activity.SplashActivity">
 
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="328dp"
-            android:layout_marginBottom="256dp"
-            android:backgroundTint="#004e89"
-            android:clickable="false"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="100dp"
-            app:cardElevation="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card6"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="296dp"
-            android:layout_marginBottom="128dp"
-            android:backgroundTint="#ef233c"
-            android:clickable="false"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="100dp"
-            app:cardElevation="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-        </androidx.cardview.widget.CardView>
-
         <TextView
             android:id="@+id/greeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/product_sans_bold"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/product_sans"
             android:text="@string/greeting"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="?attr/colorSecondaryVariant"
-            android:textSize="26sp"
-            android:layout_marginTop="10dp"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.481"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/icon" />
+            app:layout_constraintBottom_toTopOf="@id/card1"/>
 
         <TextView
             android:id="@+id/app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="120dp"
-            android:fontFamily="@font/spbutch_lite_bold"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/product_sans_bold"
             android:text="@string/app_name"
             android:textColor="?attr/colorSecondaryVariant"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/icon"
-            app:layout_constraintTop_toTopOf="@+id/icon" />
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="@id/greeting"
+            app:layout_constraintBottom_toTopOf="@+id/greeting" />
 
         <ImageView
             android:id="@+id/icon"
-            android:layout_width="16dp"
-            android:layout_height="18dp"
+            android:layout_width="300dp"
+            android:layout_height="337.5dp"
+            android:layout_marginTop="100dp"
             android:layout_centerInParent="true"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="180dp"
             android:contentDescription="@string/app_name"
             android:focusable="true"
             android:src="@drawable/logo"
-            app:layout_constraintEnd_toStartOf="@id/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="125dp"
+            android:layout_marginBottom="145dp"
             android:backgroundTint="#004e89"
             android:clickable="false"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/greeting">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/greeting">
 
             <TextView
                 android:id="@+id/perintah"
@@ -113,13 +73,13 @@
                 android:layout_height="match_parent"
                 android:elegantTextHeight="true"
                 android:fontFamily="@font/product_sans_bold"
-                android:padding="5dp"
-                android:paddingStart="55dp"
-                android:paddingEnd="55dp"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:text="@string/perintah"
                 android:textAlignment="center"
                 android:textColor="@color/design_default_color_on_primary"
-                android:textSize="17sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
@@ -127,108 +87,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
         </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card8"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:backgroundTint="#004e89"
-            android:clickable="false"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="100dp"
-            app:cardElevation="0dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="-43dp"
-            tools:layout_editor_absoluteY="-41dp">
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card2"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:backgroundTint="#004e89"
-            android:clickable="false"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="100dp"
-            app:cardElevation="0dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="358dp"
-            tools:layout_editor_absoluteY="83dp">
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card9"
-            android:layout_width="185dp"
-            android:layout_height="185dp"
-            android:backgroundTint="#004e89"
-            android:clickable="false"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="100dp"
-            app:cardElevation="0dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="143dp"
-            tools:layout_editor_absoluteY="763dp">
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card4"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="70dp"
-            android:backgroundTint="#ef233c"
-            android:clickable="false"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="100dp"
-            app:cardElevation="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.712"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card11"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="356dp"
-            android:layout_marginBottom="324dp"
-            android:backgroundTint="#ef233c"
-            android:clickable="false"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="100dp"
-            app:cardElevation="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card10"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="188dp"
-            android:layout_marginBottom="240dp"
-            android:backgroundTint="#ef233c"
-            android:clickable="false"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="100dp"
-            app:cardElevation="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-        </androidx.cardview.widget.CardView>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
