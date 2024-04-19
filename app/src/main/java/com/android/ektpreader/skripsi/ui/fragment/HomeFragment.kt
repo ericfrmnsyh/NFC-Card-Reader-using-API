@@ -14,13 +14,11 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.ektpreader.skripsi.R
 import com.android.ektpreader.skripsi.data.response.DataItem
 import com.android.ektpreader.skripsi.databinding.FragmentHomeBinding
 import com.android.ektpreader.skripsi.helper.Constant
-import com.android.ektpreader.skripsi.ui.activity.DashboardActivity
 import com.android.ektpreader.skripsi.ui.activity.MainActivity
 import com.android.ektpreader.skripsi.ui.viewmodel.DataViewModel
 import com.android.ektpreader.skripsi.ui.viewmodel.MainViewModel
@@ -199,15 +197,6 @@ class HomeFragment : Fragment() {
             insertSharedPreferences(dataNik.text.toString())
             viewModel.nik.value = dataNik.text.toString()
             //data.nik?.let { insertSharedPreferences(it) }
-        }
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(tag: String) = HomeFragment().apply {
-            arguments = Bundle().apply {
-                putString(Constant.KEY_TAG, tag)
-            }
         }
     }
 }

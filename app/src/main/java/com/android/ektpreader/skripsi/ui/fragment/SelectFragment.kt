@@ -3,13 +3,15 @@ package com.android.ektpreader.skripsi.ui.fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.ektpreader.skripsi.databinding.FragmentSelectBinding
 import com.android.ektpreader.skripsi.ui.activity.DashboardActivity
-import com.android.ektpreader.skripsi.ui.activity.DetailActivity
 import com.android.ektpreader.skripsi.ui.viewmodel.DataViewModel
 import com.android.ektpreader.skripsi.ui.viewmodel.MainViewModel
 import java.text.SimpleDateFormat
@@ -51,9 +53,7 @@ class SelectFragment : Fragment() {
             nik.let {
                 viewModel.tag.observe(viewLifecycleOwner) { data ->
                     tag = data
-                    tag.let {
-                        it1 -> select(it, it1)
-                    }
+                    select(it, tag)
                 }
             }
         }
@@ -100,27 +100,57 @@ class SelectFragment : Fragment() {
         binding.card1.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "1")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DashboardActivity.start(requireContext(), tag)
+            binding.card.visibility = INVISIBLE
+            binding.popUp.visibility = VISIBLE
+            binding.popUp.setOnClickListener{
+                DashboardActivity.start(requireContext(), tag)
+                binding.card.visibility = VISIBLE
+                binding.popUp.visibility = GONE
+            }
         }
         binding.card2.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "2")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DashboardActivity.start(requireContext(), tag)
+            binding.card.visibility = INVISIBLE
+            binding.popUp.visibility = VISIBLE
+            binding.popUp.setOnClickListener{
+                DashboardActivity.start(requireContext(), tag)
+                binding.card.visibility = VISIBLE
+                binding.popUp.visibility = GONE
+            }
         }
         binding.card3.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "3")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DashboardActivity.start(requireContext(), tag)
+            binding.card.visibility = INVISIBLE
+            binding.popUp.visibility = VISIBLE
+            binding.popUp.setOnClickListener{
+                DashboardActivity.start(requireContext(), tag)
+                binding.card.visibility = VISIBLE
+                binding.popUp.visibility = GONE
+            }
         }
         binding.card4.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "4")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DashboardActivity.start(requireContext(), tag)
+            binding.card.visibility = INVISIBLE
+            binding.popUp.visibility = VISIBLE
+            binding.popUp.setOnClickListener{
+                DashboardActivity.start(requireContext(), tag)
+                binding.card.visibility = VISIBLE
+                binding.popUp.visibility = GONE
+            }
         }
         binding.card5.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "5")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            DashboardActivity.start(requireContext(), tag)
+            binding.card.visibility = INVISIBLE
+            binding.popUp.visibility = VISIBLE
+            binding.popUp.setOnClickListener{
+                DashboardActivity.start(requireContext(), tag)
+                binding.card.visibility = VISIBLE
+                binding.popUp.visibility = GONE
+            }
         }
     }
 

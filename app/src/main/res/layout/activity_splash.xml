@@ -12,10 +12,10 @@
 
         <ImageView
             android:id="@+id/icon"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/logo"
+            android:src="@drawable/logo_new"
             android:contentDescription="@string/app_name" />
 
         <TextView
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/icon"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="145dp"
+            android:layout_marginTop="175dp"
             android:fontFamily="@font/spbutch_lite_bold"
             android:text="@string/created_by"
             android:textSize="13sp" />
@@ -35,7 +35,7 @@
             android:layout_height="35dp"
             android:layout_below="@+id/created"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/eric" />
 

@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.ektpreader.skripsi.data.LogModel
 import com.android.ektpreader.skripsi.data.response.NewLogResponse
 import com.android.ektpreader.skripsi.databinding.FragmentLogBinding
-import com.android.ektpreader.skripsi.helper.Constant
 import com.android.ektpreader.skripsi.ui.adapter.MainAdapter
 import com.android.ektpreader.skripsi.ui.viewmodel.DataViewModel
 import com.android.ektpreader.skripsi.ui.viewmodel.MainViewModel
