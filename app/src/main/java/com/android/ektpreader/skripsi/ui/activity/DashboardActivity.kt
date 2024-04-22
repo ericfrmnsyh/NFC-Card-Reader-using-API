@@ -61,41 +61,10 @@ class DashboardActivity : AppCompatActivity() {
                 Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
             }
         })
-
-//        val navView: BottomNavigationView = binding.bottomBar
-//
-//        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-//        // Passing each menu ID as a set of Ids because each
-//        // menu should be considered as top level destinations.
-//        val appBarConfiguration = AppBarConfiguration(setOf(
-//            R.id.navigation_home, R.id.navigation_profile))
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-//        navView.setupWithNavController(navController)
-//
-//        navController.addOnDestinationChangedListener { _, destination, _ ->
-//            when (destination.id) {
-//                R.id.navigation_home -> {
-//                    supportActionBar?.hide()
-//                }
-//                R.id.navigation_profile -> {
-//                    supportActionBar?.hide()
-//                }
-//                else -> supportActionBar?.show()
-//            }
-//        }
     }
 
     private fun replace(fragment: Fragment){
-
-//        tag = intent?.getStringExtra(Constant.KEY_TAG)
-//        nik = intent?.getStringExtra(Constant.KEY_NIK).toString()
-//
         val transaction = supportFragmentManager.beginTransaction()
-//        val bundle = Bundle()
-//        bundle.putString(Constant.KEY_TAG, tag)
-//        bundle.putString(Constant.KEY_NIK, nik)
-//        fragment.arguments = bundle
-
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
         transaction.addToBackStack(null)
         transaction.replace(R.id.nav_host_fragment_activity_main, fragment).commit()

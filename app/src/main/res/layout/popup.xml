@@ -41,7 +41,7 @@
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:fontFamily="@font/spbutch_lite_bold"
-                android:text="Data Ajuan\nBerhasil Dibuat"
+                android:text="@string/notification"
                 android:textColor="@color/design_default_color_on_primary"
                 android:textSize="24sp" />
 

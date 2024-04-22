@@ -25,7 +25,6 @@ class AllLogFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var mainAdapter: MainAdapter
     private lateinit var mainViewModel: MainViewModel
-    private var nik: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         @Suppress("DEPRECATION")

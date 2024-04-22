@@ -1,17 +1,15 @@
 package com.android.ektpreader.skripsi.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.GONE
-import android.view.View.INVISIBLE
-import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.ektpreader.skripsi.databinding.FragmentSelectBinding
-import com.android.ektpreader.skripsi.ui.activity.DashboardActivity
+import com.android.ektpreader.skripsi.ui.activity.PopUpActivity
 import com.android.ektpreader.skripsi.ui.viewmodel.DataViewModel
 import com.android.ektpreader.skripsi.ui.viewmodel.MainViewModel
 import java.text.SimpleDateFormat
@@ -43,8 +41,6 @@ class SelectFragment : Fragment() {
         _binding = FragmentSelectBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        //sectionPagerAdapterSetup()
-
         connectViewModel()
 
         viewModel = ViewModelProvider(requireActivity())[DataViewModel::class.java]
@@ -72,18 +68,6 @@ class SelectFragment : Fragment() {
         _binding = null
     }
 
-//    private fun sectionPagerAdapterSetup() {
-//        val sectionsPagerAdapter = ProfileSectionsPagerAdapter(this)
-//        val viewPager: ViewPager2 = binding.viewPager
-//        viewPager.adapter = sectionsPagerAdapter
-//
-//        val tabs: TabLayout = binding.tabs
-//
-//        TabLayoutMediator(tabs, viewPager) { tab, position ->
-//            tab.text = resources.getString(TAB_TITLES[position])
-//        }.attach()
-//    }
-
     private fun Date.toString(format: String, locale: Locale = Locale.getDefault()): String {
         val formatter = SimpleDateFormat(format, locale)
         return formatter.format(this)
@@ -100,67 +84,42 @@ class SelectFragment : Fragment() {
         binding.card1.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "1")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            binding.card.visibility = INVISIBLE
-            binding.popUp.visibility = VISIBLE
-            binding.popUp.setOnClickListener{
-                DashboardActivity.start(requireContext(), tag)
-                binding.card.visibility = VISIBLE
-                binding.popUp.visibility = GONE
-            }
+            val intent = Intent(requireContext(), PopUpActivity::class.java)
+            intent.putExtra("popuptitle", "SELAMAT")
+            intent.putExtra("darkstatusbar", false)
+            startActivity(intent)
         }
         binding.card2.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "2")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            binding.card.visibility = INVISIBLE
-            binding.popUp.visibility = VISIBLE
-            binding.popUp.setOnClickListener{
-                DashboardActivity.start(requireContext(), tag)
-                binding.card.visibility = VISIBLE
-                binding.popUp.visibility = GONE
-            }
+            val intent = Intent(requireContext(), PopUpActivity::class.java)
+            intent.putExtra("popuptitle", "SELAMAT")
+            intent.putExtra("darkstatusbar", false)
+            startActivity(intent)
         }
         binding.card3.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "3")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            binding.card.visibility = INVISIBLE
-            binding.popUp.visibility = VISIBLE
-            binding.popUp.setOnClickListener{
-                DashboardActivity.start(requireContext(), tag)
-                binding.card.visibility = VISIBLE
-                binding.popUp.visibility = GONE
-            }
+            val intent = Intent(requireContext(), PopUpActivity::class.java)
+            intent.putExtra("popuptitle", "SELAMAT")
+            intent.putExtra("darkstatusbar", false)
+            startActivity(intent)
         }
         binding.card4.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "4")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            binding.card.visibility = INVISIBLE
-            binding.popUp.visibility = VISIBLE
-            binding.popUp.setOnClickListener{
-                DashboardActivity.start(requireContext(), tag)
-                binding.card.visibility = VISIBLE
-                binding.popUp.visibility = GONE
-            }
+            val intent = Intent(requireContext(), PopUpActivity::class.java)
+            intent.putExtra("popuptitle", "SELAMAT")
+            intent.putExtra("darkstatusbar", false)
+            startActivity(intent)
         }
         binding.card5.setOnClickListener{
             mainViewModel.uploadLog(dateInString, nik, "5")
             Toast.makeText(requireContext(), "$nik Pengajuan Telah Dibuat", Toast.LENGTH_SHORT).show()
-            binding.card.visibility = INVISIBLE
-            binding.popUp.visibility = VISIBLE
-            binding.popUp.setOnClickListener{
-                DashboardActivity.start(requireContext(), tag)
-                binding.card.visibility = VISIBLE
-                binding.popUp.visibility = GONE
-            }
+            val intent = Intent(requireContext(), PopUpActivity::class.java)
+            intent.putExtra("darkstatusbar", false)
+            startActivity(intent)
         }
     }
 
-//    companion object {
-//        fun start(context: Context, nik: String, tag: String) {
-//            Intent(context, SelectActivity::class.java).apply {
-//                this.putExtra("KEY_NIK", nik)
-//                this.putExtra("KEY_TAG", tag)
-//                context.startActivity(this)
-//            }
-//        }
-//    }
 }

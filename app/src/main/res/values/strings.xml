@@ -94,4 +94,6 @@
     <string name="title_profile">Profile</string>
     <string name="ajuan">Ajuan</string>
     <string name="space">" "</string>
+    <string name="notification">Data Ajuan\nBerhasil Dibuat</string>
+    <string name="confirm">KONFIRMASI</string>
 </resources>
