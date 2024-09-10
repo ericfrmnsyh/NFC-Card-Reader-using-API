@@ -4,7 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.view.Window
+import android.view.WindowManager
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
@@ -27,11 +33,13 @@ class DashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.enableEdgeToEdge()
         binding = ActivityDashboardBinding.inflate(layoutInflater)
-        setSupportActionBar(binding.toolbar)
-        supportActionBar?.title = " "
+//        setSupportActionBar(binding.toolbar)
+//        supportActionBar?.title = " "
         setContentView(binding.root)
-        supportActionBar?.hide()
+//        supportActionBar?.hide()
 
         tag = intent?.getStringExtra(Constant.KEY_TAG)
         nik = intent?.getStringExtra(Constant.KEY_NIK).toString()
@@ -61,6 +69,25 @@ class DashboardActivity : AppCompatActivity() {
                 Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
             }
         })
+
+        // Hide the system bars
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
+                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN)
+
+        // Set the content to appear under the system bars so that the content
+        // doesn't resize when the system bars hide and show.
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
+                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+
+        // Hide the bottom navigation bar
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
     }
 
     private fun replace(fragment: Fragment){
