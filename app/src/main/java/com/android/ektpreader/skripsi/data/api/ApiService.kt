@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object ApiService {
-    private const val reserve = "http://192.168.42.137/rest_api/public/"
+//    private const val reserve = "http://192.168.42.137/rest_api/public/"
     private val client = OkHttpClient.Builder()
         .connectTimeout(60, TimeUnit.SECONDS)
         .addInterceptor(HttpLoggingInterceptor().

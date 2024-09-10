@@ -39,7 +39,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/popup_window_background_container"
                 android:layout_width="270dp"
-                android:background="#49A7BF"
+                android:background="#004e89"
                 android:layout_height="350dp"
                 android:layout_centerInParent="true">
 
@@ -91,12 +91,14 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/popup_window_button"
-                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="#004e89"
+                    android:backgroundTint="#f0f7ee"
+                    android:drawableTint="#f0f7ee"
+                    android:foregroundTint="#f0f7ee"
                     android:text="@string/confirm"
                     android:fontFamily="@font/spbutch_lite_bold"
                     android:textAllCaps="false"

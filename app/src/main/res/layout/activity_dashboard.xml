@@ -84,8 +84,8 @@
         app:abb_animationDuration="600"
         app:abb_animationInterpolator="@android:anim/overshoot_interpolator"
         app:abb_tabColor="#edf6f9"
-        app:abb_tabColorSelected="#fe6d73"
-        app:abb_indicatorColor="#fe6d73"/>
+        app:abb_tabColorSelected="#efefd0"
+        app:abb_indicatorColor="#efefd0"/>
 
 <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
 <!--        android:id="@+id/nav_view"-->

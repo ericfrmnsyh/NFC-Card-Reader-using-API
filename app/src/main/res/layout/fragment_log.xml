@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/product_sans_bold"
                 android:text="@string/history"
-                android:textColor="@color/white"
+                android:textColor="@color/background_color_50"
                 android:textSize="35sp" />
 
         </com.google.android.material.appbar.MaterialToolbar>

@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         )
         nfcAdapter = NfcAdapter.getDefaultAdapter(this)
 
-        DashboardActivity.start(this, "045D9042475A80")
+//        DashboardActivity.start(this, "045D9042475A80")
     }
 
     @Suppress("DEPRECATION")
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             val tagIdJoined: String = tagId.joinToString("")
             Log.d(TAG, "onNewIntent: tagId=$tagId, tagIdJoined=$tagIdJoined")
             DashboardActivity.start(this, tagIdJoined)
-            //DetailActivity.start(this, tagIdJoined)
+//            DetailActivity.start(this, tagIdJoined)
         }
     }
 

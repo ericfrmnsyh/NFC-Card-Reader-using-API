@@ -8,15 +8,16 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface ApiInterface {
-//    @GET("ktp/show/{tag}")
+//    FOR LOCALHOST
+//    @GET("ktp/{tag}")
 //    fun getDataItem(
 //        @Path("tag") tag: String
 //    ): Call<DataItem>
 
-    @GET("ktp/{tag}")
-    fun getDataItem(
-        @Path("tag") tag: String
-    ): Call<DataItem>
+//    @GET("log/{nik}")
+//    fun getLogItem(
+//        @Path("nik") nik: String
+//    ): Call<NewLogResponse>
 
     @POST("log/create")
     fun sendLog(
@@ -26,18 +27,19 @@ interface ApiInterface {
     @GET("log")
     fun getAllLog(): Call<NewLogResponse>
 
-//    @GET("log/show/{nik}")
-//    fun getLogItem(
-//        @Path("nik") nik: String
-//    ): Call<NewLogResponse>
-
-    @GET("log/{nik}")
-    fun getLogItem(
-        @Path("nik") nik: String
-    ): Call<NewLogResponse>
-
     @POST("req/create")
     fun sendReq(
         @Body addData: AddModel
     ): Call<LogResponse>
+
+//    FOR SERVER USING CI4
+    @GET("ktp/show/{tag}")
+    fun getDataItem(
+        @Path("tag") tag: String
+    ): Call<DataItem>
+
+    @GET("log/show/{nik}")
+    fun getLogItem(
+        @Path("nik") nik: String
+    ): Call<NewLogResponse>
 }
