@@ -78,7 +78,7 @@ class AllLogFragment : Fragment() {
                 if (response.isSuccessful) {
                     response.body()?.let {
                         mainViewModel.listLog.postValue(it.list_log)
-                        binding.toolbar.visibility = View.GONE
+//                        binding.toolbar.visibility = View.GONE
                     }
                 }
                 else {

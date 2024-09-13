@@ -8,6 +8,7 @@ import android.nfc.Tag
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -44,6 +45,10 @@ class MainActivity : AppCompatActivity() {
             arrayOf(android.nfc.tech.NfcF::class.java.name),
         )
         nfcAdapter = NfcAdapter.getDefaultAdapter(this)
+
+        // Hide the bottom navigation bar
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
 
 //        DashboardActivity.start(this, "045D9042475A80")
     }
